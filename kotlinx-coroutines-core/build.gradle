@@ -12,6 +12,7 @@ if (rootProject.ext.native_targets_enabled) {
 
 apply from: rootProject.file("gradle/compile-js-multiplatform.gradle")
 apply from: rootProject.file('gradle/publish-npm-js.gradle')
+apply from: rootProject.file('gradle/performance.gradle')
 
 /* ==========================================================================
   Configure source sets structure for kotlinx-coroutines-core:
