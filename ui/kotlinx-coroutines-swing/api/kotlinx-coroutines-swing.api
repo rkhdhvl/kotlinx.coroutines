@@ -1,21 +1,8 @@
-public final class kotlinx/coroutines/swing/Swing : kotlinx/coroutines/swing/SwingDispatcher {
-	public static final field INSTANCE Lkotlinx/coroutines/swing/Swing;
-	public fun getImmediate ()Lkotlinx/coroutines/MainCoroutineDispatcher;
-	public fun toString ()Ljava/lang/String;
-}
-
 public abstract class kotlinx/coroutines/swing/SwingDispatcher : kotlinx/coroutines/MainCoroutineDispatcher, kotlinx/coroutines/Delay {
 	public fun delay (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public fun dispatch (Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
 	public fun invokeOnTimeout (JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
 	public fun scheduleResumeAfterDelay (JLkotlinx/coroutines/CancellableContinuation;)V
-}
-
-public final class kotlinx/coroutines/swing/SwingDispatcherFactory : kotlinx/coroutines/internal/MainDispatcherFactory {
-	public fun <init> ()V
-	public fun createDispatcher (Ljava/util/List;)Lkotlinx/coroutines/MainCoroutineDispatcher;
-	public fun getLoadPriority ()I
-	public fun hintOnError ()Ljava/lang/String;
 }
 
 public final class kotlinx/coroutines/swing/SwingDispatcherKt {

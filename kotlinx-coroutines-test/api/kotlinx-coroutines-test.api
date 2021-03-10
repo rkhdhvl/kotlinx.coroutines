@@ -9,9 +9,6 @@ public abstract interface class kotlinx/coroutines/test/DelayController {
 	public abstract fun runCurrent ()V
 }
 
-public final class kotlinx/coroutines/test/DelayController$DefaultImpls {
-}
-
 public final class kotlinx/coroutines/test/TestBuildersKt {
 	public static final fun runBlockingTest (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;)V
 	public static final fun runBlockingTest (Lkotlinx/coroutines/test/TestCoroutineDispatcher;Lkotlin/jvm/functions/Function2;)V
@@ -66,24 +63,5 @@ public abstract interface class kotlinx/coroutines/test/UncaughtExceptionCaptor 
 public final class kotlinx/coroutines/test/UncompletedCoroutinesError : java/lang/AssertionError {
 	public fun <init> (Ljava/lang/String;Ljava/lang/Throwable;)V
 	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Throwable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-}
-
-public final class kotlinx/coroutines/test/internal/TestMainDispatcher : kotlinx/coroutines/MainCoroutineDispatcher, kotlinx/coroutines/Delay {
-	public fun <init> (Lkotlinx/coroutines/internal/MainDispatcherFactory;)V
-	public fun delay (JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public fun dispatch (Lkotlin/coroutines/CoroutineContext;Ljava/lang/Runnable;)V
-	public fun getImmediate ()Lkotlinx/coroutines/MainCoroutineDispatcher;
-	public fun invokeOnTimeout (JLjava/lang/Runnable;Lkotlin/coroutines/CoroutineContext;)Lkotlinx/coroutines/DisposableHandle;
-	public fun isDispatchNeeded (Lkotlin/coroutines/CoroutineContext;)Z
-	public final fun resetDispatcher ()V
-	public fun scheduleResumeAfterDelay (JLkotlinx/coroutines/CancellableContinuation;)V
-	public final fun setDispatcher (Lkotlinx/coroutines/CoroutineDispatcher;)V
-}
-
-public final class kotlinx/coroutines/test/internal/TestMainDispatcherFactory : kotlinx/coroutines/internal/MainDispatcherFactory {
-	public fun <init> ()V
-	public fun createDispatcher (Ljava/util/List;)Lkotlinx/coroutines/MainCoroutineDispatcher;
-	public fun getLoadPriority ()I
-	public fun hintOnError ()Ljava/lang/String;
 }
 

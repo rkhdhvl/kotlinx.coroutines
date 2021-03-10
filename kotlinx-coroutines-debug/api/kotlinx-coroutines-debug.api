@@ -1,5 +1,4 @@
 public final class kotlinx/coroutines/debug/CoroutineInfo {
-	public fun <init> (Lkotlinx/coroutines/debug/internal/DebugCoroutineInfo;)V
 	public final fun getContext ()Lkotlin/coroutines/CoroutineContext;
 	public final fun getCreationStackTrace ()Ljava/util/List;
 	public final fun getJob ()Lkotlinx/coroutines/Job;
@@ -34,30 +33,12 @@ public final class kotlinx/coroutines/debug/DebugProbes {
 	public final fun withDebugProbes (Lkotlin/jvm/functions/Function0;)V
 }
 
-public final class kotlinx/coroutines/debug/DebugProbesKt {
-	public static final fun probeCoroutineCreated (Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-	public static final fun probeCoroutineResumed (Lkotlin/coroutines/Continuation;)V
-	public static final fun probeCoroutineSuspended (Lkotlin/coroutines/Continuation;)V
-}
-
 public final class kotlinx/coroutines/debug/State : java/lang/Enum {
 	public static final field CREATED Lkotlinx/coroutines/debug/State;
 	public static final field RUNNING Lkotlinx/coroutines/debug/State;
 	public static final field SUSPENDED Lkotlinx/coroutines/debug/State;
 	public static fun valueOf (Ljava/lang/String;)Lkotlinx/coroutines/debug/State;
 	public static fun values ()[Lkotlinx/coroutines/debug/State;
-}
-
-public final class kotlinx/coroutines/debug/internal/ByteBuddyDynamicAttach : kotlin/jvm/functions/Function1 {
-	public fun <init> ()V
-	public synthetic fun invoke (Ljava/lang/Object;)Ljava/lang/Object;
-	public fun invoke (Z)V
-}
-
-public final class kotlinx/coroutines/debug/internal/NoOpProbesKt {
-	public static final fun probeCoroutineCreated (Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-	public static final fun probeCoroutineResumed (Lkotlin/coroutines/Continuation;)V
-	public static final fun probeCoroutineSuspended (Lkotlin/coroutines/Continuation;)V
 }
 
 public final class kotlinx/coroutines/debug/junit4/CoroutinesTimeout : org/junit/rules/TestRule {
@@ -78,11 +59,5 @@ public final class kotlinx/coroutines/debug/junit4/CoroutinesTimeout$Companion {
 	public final fun seconds (JZZ)Lkotlinx/coroutines/debug/junit4/CoroutinesTimeout;
 	public static synthetic fun seconds$default (Lkotlinx/coroutines/debug/junit4/CoroutinesTimeout$Companion;IZZILjava/lang/Object;)Lkotlinx/coroutines/debug/junit4/CoroutinesTimeout;
 	public static synthetic fun seconds$default (Lkotlinx/coroutines/debug/junit4/CoroutinesTimeout$Companion;JZZILjava/lang/Object;)Lkotlinx/coroutines/debug/junit4/CoroutinesTimeout;
-}
-
-public final class kotlinx/coroutines/debug/junit4/CoroutinesTimeoutStatement : org/junit/runners/model/Statement {
-	public fun <init> (Lorg/junit/runners/model/Statement;Lorg/junit/runner/Description;JZ)V
-	public synthetic fun <init> (Lorg/junit/runners/model/Statement;Lorg/junit/runner/Description;JZILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public fun evaluate ()V
 }
 

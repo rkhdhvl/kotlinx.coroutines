@@ -9,16 +9,6 @@ public final class kotlinx/coroutines/rx3/RxAwaitKt {
 	public static final fun awaitLast (Lio/reactivex/rxjava3/core/ObservableSource;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun awaitOrDefault (Lio/reactivex/rxjava3/core/MaybeSource;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 	public static final fun awaitSingle (Lio/reactivex/rxjava3/core/ObservableSource;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-	public static final fun disposeOnCancellation (Lkotlinx/coroutines/CancellableContinuation;Lio/reactivex/rxjava3/disposables/Disposable;)V
-}
-
-public final class kotlinx/coroutines/rx3/RxCancellable : io/reactivex/rxjava3/functions/Cancellable {
-	public fun <init> (Lkotlinx/coroutines/Job;)V
-	public fun cancel ()V
-}
-
-public final class kotlinx/coroutines/rx3/RxCancellableKt {
-	public static final fun handleUndeliverableException (Ljava/lang/Throwable;Lkotlin/coroutines/CoroutineContext;)V
 }
 
 public final class kotlinx/coroutines/rx3/RxChannelKt {
@@ -61,7 +51,6 @@ public final class kotlinx/coroutines/rx3/RxMaybeKt {
 }
 
 public final class kotlinx/coroutines/rx3/RxObservableKt {
-	public static final fun isFatal (Ljava/lang/Throwable;)Z
 	public static final fun rxObservable (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;)Lio/reactivex/rxjava3/core/Observable;
 	public static synthetic fun rxObservable$default (Lkotlin/coroutines/CoroutineContext;Lkotlin/jvm/functions/Function2;ILjava/lang/Object;)Lio/reactivex/rxjava3/core/Observable;
 }
