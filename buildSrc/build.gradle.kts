@@ -19,9 +19,6 @@ repositories {
         maven("https://plugins.gradle.org/m2")
         maven("https://dl.bintray.com/kotlin/kotlin-dev")
     }
-    properties["kotlinCompilerRepo"]?.let {
-        maven(it.toString())
-    }
 
     if (buildSnapshotTrain) {
         mavenLocal()

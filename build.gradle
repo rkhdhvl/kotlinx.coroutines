@@ -65,7 +65,6 @@ buildscript {
         }
         maven { url "https://jetbrains.bintray.com/kotlin-native-dependencies" }
         maven { url "https://plugins.gradle.org/m2/" }
-        maven { url kotlinCompilerRepo }
     }
 
     dependencies {
@@ -154,7 +153,6 @@ allprojects {
         // Future replacement for kotlin-dev, with cache redirector
         maven { url "https://cache-redirector.jetbrains.com/maven.pkg.jetbrains.space/kotlin/p/kotlin/dev" }
         maven { url "https://kotlin.bintray.com/kotlinx" }
-        maven { url kotlinCompilerRepo }
     }
 }
 
