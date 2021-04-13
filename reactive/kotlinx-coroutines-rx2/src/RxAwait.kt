@@ -56,7 +56,7 @@ public suspend fun <T> MaybeSource<T>.awaitOrDefault(default: T): T = suspendCan
     subscribe(object : MaybeObserver<T> {
         override fun onSubscribe(d: Disposable) { cont.disposeOnCancellation(d) }
         override fun onComplete() { cont.resume(default) }
-        override fun onSuccess(t: T) { cont.resume(t) }
+        override fun onSuccess(t: T!!) { cont.resume(t) }
         override fun onError(error: Throwable) { cont.resumeWithException(error) }
     })
 }
@@ -74,7 +74,7 @@ public suspend fun <T> MaybeSource<T>.awaitOrDefault(default: T): T = suspendCan
 public suspend fun <T> SingleSource<T>.await(): T = suspendCancellableCoroutine { cont ->
     subscribe(object : SingleObserver<T> {
         override fun onSubscribe(d: Disposable) { cont.disposeOnCancellation(d) }
-        override fun onSuccess(t: T) { cont.resume(t) }
+        override fun onSuccess(t: T!!) { cont.resume(t) }
         override fun onError(error: Throwable) { cont.resumeWithException(error) }
     })
 }
@@ -175,7 +175,7 @@ private suspend fun <T> ObservableSource<T>.awaitOne(
             cont.invokeOnCancellation { sub.dispose() }
         }
 
-        override fun onNext(t: T) {
+        override fun onNext(t: T!!) {
             when (mode) {
                 Mode.FIRST, Mode.FIRST_OR_DEFAULT -> {
                     if (!seenValue) {

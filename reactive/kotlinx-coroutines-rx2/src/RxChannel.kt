@@ -83,11 +83,11 @@ private class SubscriptionChannel<T> :
         _subscription.value = sub
     }
 
-    override fun onSuccess(t: T) {
+    override fun onSuccess(t: T!!) {
         offer(t)
     }
 
-    override fun onNext(t: T) {
+    override fun onNext(t: T!!) {
         offer(t)
     }
 
